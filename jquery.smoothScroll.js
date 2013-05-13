@@ -1,12 +1,10 @@
 (function($) {
 	$.fn.smoothScroll = function(options) {
-		return this.each(function() {
+		this.on('click', function(event) {
+			event.preventDefault();
 			var target = $($(this).attr('href'));
-			$(this).click(function(event) {
-				event.preventDefault();
-				$('html, body').animate({
-					scrollTop: target.offset().top
-				});
+			$('html, body').animate({
+				scrollTop: target.offset().top
 			});
 		});
 	}
