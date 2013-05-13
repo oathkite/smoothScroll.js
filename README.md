@@ -17,4 +17,4 @@ jquery(1.8以上)
 
 <a href="#sample">Go to Sample div</a>
 ```
-idがsampleのdivまでウインドウをスクロールします。
+idがsampleのdivまでウインドウをスクロールします。該当要素が無い場合は、ページ最上部までスクロールします。
