@@ -17,3 +17,4 @@ jquery(1.8以上)
 
 <a href="#sample">Go to Sample div</a>
 ```
+idがsampleのdivまでウインドウをスクロールします。
