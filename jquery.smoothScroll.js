@@ -2,9 +2,9 @@
 	$.fn.smoothScroll = function(options) {
 		this.on('click', function(event) {
 			event.preventDefault();
-			var target = target.length ? $($(this).attr('href')).offset().top : 0;
+			var target = $($(this).attr('href'));
 			$('html, body').animate({
-				scrollTop: target
+				scrollTop: target.length ? $($(this).attr('href')).offset().top : 0
 			});
 		});
 	}
