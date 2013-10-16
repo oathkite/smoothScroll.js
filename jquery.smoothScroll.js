@@ -1,12 +1,13 @@
 (function($) {
 	$.fn.smoothScroll = function(options) {
-		$('body').delegate('a[href^=#]', 'click', function(event) {
-			event.preventDefault();
+		offset = offset || 0;
+		$('body').on('click', 'a[href^=#]', function(e) {
+			e.preventDefault();
 			var target = $($(this).attr('href'));
 			$('html, body').animate({
-				scrollTop: target.length ? $($(this).attr('href')).offset().top : 0
+				scrollTop: target.length ? $($(this).attr('href')).offset().top - offset : 0
 			});
-		});
+		})
 	}
 })(jQuery);
 $(function() {
