@@ -1,5 +1,5 @@
 (function($) {
-	$.fn.smoothScroll = function(options) {
+	$.fn.smoothScroll = function(offset) {
 		offset = offset || 0;
 		$('body').on('click', 'a[href^=#]', function(e) {
 			e.preventDefault();
